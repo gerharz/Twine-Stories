@@ -1,1 +1,35 @@
-<tw-storydata name="DATT 2300 -Lab 2 Game" startnode="1" creator="Twine" creator-version="2.2.1" ifid="5AA8EDA8-4A32-4965-B393-A68841084DB9" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="412,200" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+<tw-storydata name="DATT 2300 -Lab 2 Game" startnode="1" creator="Twine" creator-version="2.2.1" ifid="5AA8EDA8-4A32-4965-B393-A68841084DB9" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.deck = function(){
+    
+	this.names = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+	this.suits = ['Hearts','Diamonds','Spades','Clubs'];
+    var cards = [];
+   
+    
+    for( var s = 0; s < this.suits.length; s++ ) {
+        for( var n = 0; n < this.names.length; n++ ) {
+            cards.push(this.names[n] + " of " + this.suits[s]);
+        }
+    }
+    return cards;
+}
+</script><tw-passagedata pid="1" name="Start" tags="" position="399,0" size="100,100">SOLITARIRE 2: NOT REALLY SOLITAIRE
+
+Do you know how to play? 
+[[Yes]]
+[[No]]
+&lt;&lt;set $deck to setup.deck()&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="2" name="Yes" tags="" position="291,150" size="100,100">Great! Now let&#39;s draw those first three cards! 
+[[Go]]</tw-passagedata><tw-passagedata pid="3" name="No" tags="" position="531,150" size="100,100">SOLITAIRE II: NOT REALLY SOLITAIRE is a &quot;game&quot; in which you try to assemble a straight, a chronological set of three cards with the same suit. 
+
+Like:
+2 of clubs, 3 of clubs, 4 of clubs
+
+Or:
+J of spades, Q of spades, K of spades 
+
+To start the game, first draw 3 cards from the deck. Once you&#39;ve done that, actual gameplay begins.
+
+At the start of each of your turns, roll a six-sided die. Then draw X cards from the deck, where X is the number that roll resulted in. From those X cards, you may pick one to put into your hand. The rest go to the bottom of the deck in a random order. Repeat until a straight has been assembled. 
+
+</tw-passagedata><tw-passagedata pid="4" name="Go" tags="" position="291,300" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
